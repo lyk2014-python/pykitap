@@ -9,7 +9,6 @@
 
 
 
----------
 
 #### Interaktif websiteler
 
@@ -20,8 +19,6 @@
 
 
 
------------
-
 #### Topluluklar
 
 * [PyIstanbul](http://pyistanbul.org/)
@@ -29,16 +26,12 @@
 
 
 
------------
-
 #### Etkinlikler
 
 * [Linux Yaz Kampı](http://kamp.linux.org.tr)
 
 
 
-
--------
 
 
 
