@@ -1,0 +1,200 @@
+LYK2014 PYTHON/DJANGO web 2	DAY THREE	13/08/14
+
+
+					javascript
+-----------------------------------------------------------------------------------------------
+
+java =/= javascript
+
+*node.js ile javascript artik sadece client-side degildir.
+
+*Yukledigimiz bir website (index.html mesela) sunucudan istemiciye geri gelir ve yukaridan asagiya pars etmeye baslar. Burada bir linke geldiginde (mesela jquery.js) sunucudan bunu ister ve tarayaciya geldiginde bir js dosyasi oldugunu bilir ve calismaya baslar.Js'in calismasi siraya tayipdir ve bu sira html sirasina gore belirtilir. 
+
+*var kelimesiyle: int, char, string, arrow
+	var x = 5;
+	    x = "hey";
+				
+
+
+				TRUE vs FALSE, SINGLE vs MULTI THREAD
+					
+
+
+false: 0, ",", undefined		# bazen degerler null yerine undefined olabiliyor
+
+
+
+Javascript => single thread olarak calisir: bir anda bir is yapan bir program parcasi. tek bir thread varsa yapacaklarinizi sira sira yaparsiniz. Multi thread varsa zaman kazanmak icin islemleri paralel olarak yarim vakitte bitirebilirsiniz. 
+
+* race condition single threadle asla olmaz (senkronize problemi asla olmaz).browserlar JS'i single thread olarak calistiriyorlar. 
+
+
+
+for (var i in array)	for (var i=0, i<array, i++) //bunlar ayni
+
+
+x = 5
+x = { value : 5}	# javascript aslinda object oriented bir dil degildir
+			# suslu parantezlerle obje yazilir
+			# cok verboz bir dildir; xml yerine json secmek hiz acisindan 
+			# avantajdir
+
+
+
+					OBJE YARATMAK 
+
+
+
+var x = [1, 2, 3] ; 
+
+var x = {a :[1,2] } ;	# iki nokta koymaya dikkat edin. a = key, [1,2] = value
+
+
+* Map: key ve value dan olusur. 
+	mesela key=Ali
+	m["Ali"] 
+
+
+var s = "bla";		# tek tirnak, iki tirnak ayni sey
+var s = 'bla';		# ama baska dillerle problem olabilir, mesela html
+			# s = '<p class "a">'
+
+
+
+var phone = {
+	'Ali' : '555 55 55',	# kesinlikle noktali virgul degil
+	'Ayse': '546 95 06',
+	'Ozan': '546 96 00'	# son satira virgul koyma! 
+
+};
+
+
+
+	Ozan'in telefon numarasina ihtiyacimiz var:
+
+phone ["Ozan"] 		# bizim string imiz "Ozan" 
+				# "Ozan" ile "ozan" ayni sey degil
+
+var phone = {		
+
+	5 : "Hasan"	# kotu form ama yapilabilir
+
+	};			
+
+	phone[5] = 'Hasan'
+
+
+
+
+					FUNCTIONS
+
+
+
+
+function sayHi:(name) {			# buraya var yazilmaz
+	
+	console.log(name)		
+	var greetString = "Hi" + name	# name in string oldugunu varsayiyoruz
+
+	console.log(" Hi " + name); 	
+}
+
+
+------------------------------------------------------------------------------------------------
+
+			
+
+			COMPILED vs INTERPRETED (derleyeci vs. yorumlanan)
+
+
+
+* compiled languages (derlenen):
+	
+ Kod yazilir, compilera verilir, linklenilir, ve RAM in alacagi bir dosya olusur. Calistirdigimizda instructionlar CPU'ya gonderilir. Compile olan dillerde kullanici kodlara erisemez. Ayrica instructionlar assembly instructionidir..  
+
+* interpreted languages (yorumlanan): mesela Python, Java, ruby, javascript.
+
+Bir kere de tum instructionlari cikarmiyor, gerektigi gibi satir satir degistiriyor ve yorumluyor. Burada compilerin bir kere de yaptigi isi biz satir satir yapiyoruz, bu yuzden cok daha yavastir. I
+
+Modal(ity)	# arka tarafdaki islemleri durdurur
+
+jQueryModal	# aslinda arka taraftaki islemleri durduramaz, sadece basilamaz
+		# arka tarafda js calismaya devam ediyor
+		
+		
+ekstra kaynak:
+http://erkantaylan.wordpress.com/2013/10/10/derlenen-vs-yorumlanan-diller/ (turkce)
+-----------------------------------------------------------------------------------------------
+
+
+				VERSIYON KONTROL SISTEMLERI
+
+
+
+senkron (merkezi: VSS, SVN) ve asenkron (dagitik: SVN, Git)
+
+
+-depo/repo: repository kodlarinizin ve takipcilerin bulundugu yer
+
+-git init: dosyayi repo yaparsiniz
+
+-calisma alani: kod yazdiginiz ve degisiklik yaptiginiz yer 
+
+-commit: kendi calistiginiz katki ya da gonderiyi repo ya geri gonderirsiniz. en onemlisi kim ve ne zaman ne degisiklik yaptigini yazmakdir.
+
+-atomic commit: bir commit de mutlaka o ozellikle olan tum degisiklikleri gondermeniz gerekir. birden fazla ozelligi pakete commitlemeyin! bir ozellik, bir commit. atomic commit e donunce her yapilan kucuk commiti gorursunuz, ve de geri almak istediginizde isiniz cok daha kolay olur. birden fazla  ozelligi tek commit de gonderirseniz geri almak istediginizde ikisini de almak zorunda kalirsaniz. o yuzden tek ozelligi tek commit e yaparsaniz o zaman bi tek onu geri alabilme imkaniniz olur.
+
+-aciklama:her commit icin en az bir satir aciklama yapmak zorundasiniz. bu bir good practice'dir cunku o aciklama cok onemlidir. belli bir standardi ekip olusturur, ama normalde sunlardir: ozelliklere bu degisiklikler yapilmis, su tartismalar olmus, bunlar degismis. 
+	1-red mine icin: surum takip sistemini taradigi icin refs#123 gibi bir sey gordugunde commite baglar ve buna bakabilirsiniz. tum refs'leri, hangi tartismalar olmus ve ne kod degismis hepsini tek bir yerde gorebiliyorsunuz.
+	*en azindan sunlari yazin: bir baslik (bir satir, kisa aciklama) ve altinda daha uzun bir aciklama yazabilirsiniz. su dosya da bunu degistirdim yazmayin! koda ne degismis diye bakarak fazla zaman harcayacaginiz icin aciklama yaparsaniz isiniz daha kolay olur: "ben bu kodla dugmeyi yesil yaptim"
+	2-surum cikartirken commit ler cok yardimci olacaktir.
+	3-tek basiniza kod yazarsaniz ve surum takip sistemi kullanirsaniz yaptiginiz herseyi geri alabilirsiniz! time machine gibi yani.
+
+-merge/diff: diff iki tane text dosyayi karsilastirir. merge yaptiginizda ise farkli versiyornlari birlestirmis olursunuz. diff yapip mesela farkli bir dosyaya aktarabilirsiniz (pipeline kullanabilirsiniz) ve bunu baska birisine gonderince direk baska bir bilgisayarda gecirebilirsiniz.
+
+-yama/patch: her bir kucuk sorunu cozdugunuzde git'e commit yapip patchlerinizi aktarabilirsiniz.
+
+-pull request: bir degislik yaptiniz ama depo yu degistirme hakkiniz yoktur, ama kendi versiyonunuzu yapmaya devam edebilirsiniz ve bunu asil programciya gonderebilirsiniz.
+
+-tag/etiket: sik sik etiketlerseniz tam ne zaman ne yaptiniz bulursunuz. bir commit baska bir commite bagliysa o zaman etiket kullanarak tam olarak ne olmus bunu kayit edebilirsiniz ve cesitli yerleri isaretleyebilirsiniz. surum takipci sistemi bunu yapamaz, siz tag katmak zorundasiniz.
+
+-branch/dal: bir repoya cok commit yaptiktan sonra bu branch olabilir. git'de kendi branchiniz (ana branch - dal) master'dir. istediginize degistirebilirsiniz ama master birakmak iyi olabilir, cunku daha sonra 'hakan'in master oldugunu aciklamak zorunda kalabilirsiniz. release branch'inizin adi r-1x olabilir mesela. ana dalda baska gelistirme yapmaya devam ederken diyelim hata yaptiniz. release branchinize gecersiniz ve orda bunu cozersiniz, ve bu da r.1.1. olur. yeni surumunuzle eski hatali branchleriniz connect edebilirsiniz . diyelim yeni bir branch cikardiniz, bu da r.2.x. su anda iki farkli release'iniz vardir, oncekisini kullananlari yenisini kullanmaya zorlamak zorunda degilsiniz. bir hata bildirildiginde ana branch de cozersiniz ve orda commitlersiniz. 'backport' etmek yeni cekirdeklerdeki commitleri alip eski surume gondermekdir.
+
+-feature branch: bos zamaninizda yeni bir ozellikde calismak isterseniz bir feature branch acarsiniz ve bunda calisirsiniz, sonra da bunlari merge edebilirsiniz. master branch derlenemez o yuzden baska branch de yaparsiniz bunu. buyuk bir ekipte calisiyorsaniz oyle master branch e commit yapamazsiniz. is bitince master brance e commit yap dersiniz. 'tamam oldu bitti' denilen branch'in cok kaliteli kontrol'den gecmesi gerekir ve bu standartlara uymazsa master branche derlenemez. bu is surum yoneticisinin kararina baglidir. kod kalitesinden gecmek zorundasiniz. surum yoneticisi kodunuz cirkin diye reject edebilir yani.
+
+-teknik ve pazarlama gibi iki türlü isimleme vardir: mesela java hala 1.8 dir, birde pazarlama icin adlandirilanlar vardir, mesela windows 8. temiz ve yeni olur boylece. bu da pazarlamacinin isidir. 
+
+-adlandirilma: 1. major surum, 2. minor, 3. bugfix'dir. ayni zamanda geri uyum numarasidir. sadece hata temizlemissen bugfix numarasini duzeltirsiniz. minor numara yeni ozellik numarasidir, fakat program kurulumunda kafa agritmaz. major surum degismesi, örneğin 1.0.0'dan 2.0.0’a atlayan programlarda ciddi degisiklikler vardir. diyelim ki tum navigasyon sistemini degistirdiniz, ama 1'in uzerine koydugunuzda calisiyor diye bunu minor degisiklik diye pazarlamayamazsiniz. 
+
+-beta, alpha surum adlari: alpha da sizin asla gormediginiz seylerdir, sadece programcilarin gorucegi seylerdir. beta topluma acilmisdir, yeni ozellikler gelebilir ama genel olarak dogru calismasini beklersiniz. alpha da calismayan bircok sey olmasini beklemeniz gerekir. son surum adayindan sonra hic commit olmayip sadece surumun versiyonunun degistirmesini beklersiniz, 1.0.1.alfa gibi. son surumde final diye isaretlenilir. final ciktiktan sonra nadiren hata gelir ve gelen hata hizlica cozumlunelir cunku bunlar genelde beta da olmasi gerekir. 
+
+### tum bunlar merkezi surumler icin gecerlidir!
+
+
+ekstra kaynak:
+http://git-scm.com/book/tr/Baslangic   (tr versiyonu. ingilizcesini okudum, gercekten harika bir kitap)
+---------------------------------------------------------------------------------------------
+				
+				DAGITIK SURUM TAKIP SISTEMLERI
+
+
+
+-clone/fork: catallama icin surum takip sistemi kullanmak zorunda degilsiniz. birseyin kopyasini alirsiniz ve yeni bir depo acarsiniz, bir alakasi kalmaz originali ile. forku kullanmak icin gercekten tek bir neden vardir: master branch’i yapanla yapmak istedikleriniz ortusmuyordur, anlasamiyorsunuzdur, o yuzden forklanir. yoksa master branch de ki update leri takip etmek istersiniz, o zaman kendi branchinizi yaratirsiniz forklamak yerine. mesela: at&t, linux cok kullanilmaya baslayinca unix'i forklayip para kazanmak icin kendi versiyonunu yaratir. at&t'in 5. surumden ote cikardigi hicbirseyi kullanamazsiniz, satamazsiniz. berkeley universitesi ile aralarinda nir dava olup, universite kazanir ve sistem 5 noktasinda bir fork olusur, BSD Linux baska bir yere, ve at&t X versiyonu baska bir yere gider.
+
+-dagitik surum sisteminde her sey fork'dur. git'le yapabileceginiz herseyi yeni fork ettiginiz surumle de yapabilirsiniz. eger ustunde cok calistiysaniz ve bunu orijinale gondermek istiyorsaniz, bunu push edebilirsiniz (ama erismeniz gerekir). erisemezsiniz posta gonderirsiniz, push request yaparsiniz. eger orijinal surumu siz yazdiysaniz ve bu yeni degisikleri baskasindan isterseniz sizde pull yapabilirsinz. gelen push request'leri kabul etmek zorunda degilsiniz. o yuzden bir cok farkli linux dagitimi vardir. 
+
+-sosyallesmek gerek! iletisim cok onemli, kurmak zorundasiniz. github bunu kolaylastirir. dugmeye basarsiniz, forklarsiniz ve pull request yaparsiniz. orada kayit olur, projenin sahibine post olarak gider. eger bir proje uzun bir sure istekleri reddetmisse bu demektirki artik cok bir ilgi vermiyordur, bu kisiyle de calisilmaz. o yuzden depo yu follow edebilirsiniz, yeni degisiklikler nedir, kontrol etmek yerine eposta ile bu size gelir ve haberdar olursunuz. boylece tum commitler size gelir, kod review yaparsiniz ve bir accept/reject edebilirsiniz.
+
+-acik kaynak vs. ozgur yazilim: bir surum GPL ise yeni versiyonu GPL olmak zorunda. GPL sizin kodunuza bir ticari kisitlama koymaz ama creative commons license'i ticari olarak kisitlar. BSD, Mozilla ya da Apache'li bir lisansli birsey yaziyorsaniz, bunlarda GPL kullanamazsiniz. 
+
+-Internette buldugunuz her kodu kullanmayin! programlar commercial olmasina ragmen acik olabiliyor. yasal olarak Turkiye icin her ozgur yazilim lisansini kopyalayip icine koymaniz yeterli olmuyor. Turkce cevirisini koymak zorundasiniz. hem ingilizcesini hem turkcesini koyamazsiniz. Ceviriyi buradan bulabilirsiniz: www.ozgurlisanslar.org.tr
+
+
+
+
+
+
+
+
+
+
