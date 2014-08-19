@@ -1,0 +1,1 @@
+Buraya da django notları.
