@@ -1,15 +1,18 @@
 pykitap
 =======
 
-### Lyk 2014 Python/Django kursundan çıkan notların birleştiği yer. 
+### Linux Yaz Kampı 2014 Python/Django kursundan çıkan notların birleştiği yer. 
 
 Bu repo'yu klonlamak için istediğiniz klasöre gidip Terminal'de bunu yazın:
 
 > $ git clone https://github.com/lyk2014-python/pykitap
 
-#### Wastebasket: tüm notların bulunduğu, en başta upload edeceğiniz yer. 
 
-Clone ettikten sonra notlarınızı bu folder'a kopyalayıp, teker teker commit edin. Commit'inizde notun içeriği hakkında bir kaç birşey yazın. Mesela:
+
+
+#### Wastebasket
+
+Tüm notların bulunduğu, en başta upload edeceğiniz yer. Clone ettikten sonra notlarınızı bu folder'a kopyalayıp, teker teker commit edin. Commit'inizde notun içeriği hakkında bir kaç birşey yazın. Mesela:
  
 > $ git add day1.md
 >
