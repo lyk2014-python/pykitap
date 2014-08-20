@@ -4,7 +4,7 @@ PYTHON /DJANGO
 - Az kod yazarak uygulamalarımızı geliştirmemize olanak sağlar.
 - Django ise MVT yapısını kullandığı için her şey açık ve nettir.
 - Oldukça yüksek seviyeli ve anlaşılırdır.  
-### M-V-T
+##M-V-T
  
 **Model View Template**  
 **Model** 
