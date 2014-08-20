@@ -1,0 +1,89 @@
+
+LYK2014 PYTHON/DJANGO web 2 DAY ONE-TWO 11/12-08-14
+--------------------------------------------------------------
+				IP address:
+
+
+*ulke, sehir, mahalle, ev adresi olarak dusunulebilir; ilk uc sayi ayni yerden gelen bir cok bilgisayar icin aynidir: (192.168.1).5
+*kendi bilgisayarinizda bakmak icin: ifconfig veya ip a
+*kendi bilgisayarinizda IP farklidir: internete cikis yapinca IP degisiyor. bir pc'nin IP'si unique dir, mesela 10.47.50.43, 10 ve 192 ile baslayan IP ler 'rezerve' dir. her bilgisayar 192 ile baslayan IP den cikar, o router ona 'damga' sini koyar.
+*kac tane tabeladan gectigimizi anlamak icin traceroute (ya da mtr, traceroute + ping)
+*IP'den info ogrenmek icin: host, dig, dnslookup
+*obur tarafta hayat var mi: ping
+*baska bir bilgisayar a nasil baglanilir? IP ye baglanirken ayrica bir port a baglanmak isitiyorum diyebiliyorsunuz.
+*broadcast adresi: bir mesaj gonderince her bilgisayar a gider. broadcast yapinca paket aga bagli tum aygitlara iletilir.
+*web uzerinde yapilan habarlesmeleri sifrelemek isterseniz SSL kullanirsiniz. http:// kullanirken port 80 den girersiniz, ama https:// den baglanirken port 443 den girersiniz.
+*karsisindakinin soyledigi kisi oldugunu nasil anlarsiniz? SSL sertifikasi ile elimizdeki bilge ayni mi diye tarayaci bakiyor. Imzanin guvenli olup olmadigini tarayaci 'guvenilir liste' ye bakip anlar. Eski bir tarayaci yeni cikan sertifikalarin cogunu tanimayacaktir => guncellemek gerekir. Sertifika sadece kimlik dogrulamasi yapar, sifrelemeyi daha iyi yapmaz.
+*makina nasil IP ye gider?
+/etc/host da IP tanimladiysaniz direk gider. DNS, IP ile domain name i karsilastirir.
+*sunucu nedir?
+*bir bilgisayar (mesela Apache). 1 veya 1 den fazla baglanti yapabiliyor. Tarayaci ile bir sayfa ya ulasmaya calisiriz. DNS adres cozumleme mekanizmasi: bilgisayar da cache vardir, DNS server vardir, en yakindaki DNS server ina sorar IP adresi alirsiniz ve ordan baglanirsiniz. En tepe de otoriteler vardir. Veri tabaninda adres sorgulamasi yaparsiniz. DHCP server dan IP alirsiniz, gateway den cikarken routerlar arasinda damga yaratilir, dolasir ve website nin gateway ine ulasir. Mesela google a talep gelir, 25 port unu kullanmak isterseniz, IP im bu, istegim bu dersiniz. Google da ki routera bakar:25, otomatik olarak dogru servera yonlendirir.
+* sunucu * istemci
+html(statik) php ruby rails
+php
+css ASP python/django
+django
+ruby railes
+python
+ASP
+ajax
+
+ekstra kaynaklar:
+http://support.microsoft.com/kb/164015/tr (turkce)
+http://www.tcpipguide.com/free/t_toc.htm (ingilizce) 
+
+-------------------------------------------------------------------------------
+sayfayi kullaniciyi cekti:
+*ne kadar sure inceledi? sayfa goruntulendiginden sonra sunucu ile bir bag kalmiyor, o zaman cikis saatini nasil anlar? tab e donunce yeni ya da eski kullanici oldugumuzu nasil anlar sunucu => aslinda tamamen tahmine dayaniyor. ayni IP den gelen kac kisi olabilir ki? bir sayfadan digerine gecerken hic bir baglanti olmuyor.
+www.google.com.tr/?q=blabla&bla q'dan sonra gelen terimler 'search query' olusturuyor
+get # url gozukuyor, post ile ayni isi gorur: bir degisimi bir sayfadan alip oburune aktirir
+post # url gozukmuyor, bilgiler adres satirinda gozukmez
+cookie # degisken bilgi sunucu ya gider ve bir cerez birakiyorsunuz. istemcisinde degisim saklaniyo r ve daha sonra ayni kullanici geldigi zaman uygulama istemci den cookie istiyor ve
+kaldiginiz yerden devam ediyorsunuz. istemci cookie yi degistirse bastan basliyorsunuz. IP adre s kisa vakit verilir. Baska sekilde kullanici aynimi bir fikrimiz yokdur.
+form #
+---------------------------------------------------
+Mobil vs Desktop
+* gezdiginiz siteler reklam sirketleriyle anlasiyorlar
+her bir site sizin yaptiklariniz uzerine data alir ve website den website ye gidebilir, bu yuzd en baska yerlere gittiginizde ayni veya benzer urunleri size satmaya calisirlar (ex: amazon, google, fb)
+* mobil vs. desktop
+site icin ayri mobil arayuzu yaptirildiysa mobil bunu gorur. bilgisayardan mi cepten mi gelir
+bu bilgiyi nasil bulursunuz? mesela user-agent switcher kullanarak firefox ya da baska tarayacilarda farkli gosterebilirsiniz.
+user-agent switcher kullanma avantajlari:
+1-tether yapmak icin bilgisayarinizda bunu kullanarak mobil internet sunucunuzu kandirabilirsiniz.
+2-website dizayn ederken mobil de nasil gozuktugunu gormek icin kullanabilirsiniz
+---------------------------------------------------
+HTML & CSS & javascript
+html= website nin asil iskeletonu
+css= style/design
+javascript= website ye dinamiklik verir; animasyon, fln. ayrica sunucu da da calisir (node.js)
+HTML tags
+<tag> birincisiyle actim tag i, ikincisiyle kapattim </tag>
+<!doctype html> # html versiyonunu aciklar. burada html 5 dir.
+<html> # hersey html tag'leri arasinda olmasi gerekir
+<head> # sayfa title i burada olur, javascript eklenebilir
+<title> </title>
+</head>
+<body> # website in 'body' si
+<p> burada biseyler yaziyorum # paragraf yapmak icin
+</p>
+<h1> </h1> # baslik icin. h1 en onemli ve en buyugudur, h6 ya kadar gider.
+<ul>
+<li> 1. madde </li>
+<li> 2. madde </li>
+</ul> # unordered liste (. . .) , ordered liste (1. 2. 3.) yapmak icin <ol>
+<a href= "URL"> burda link ismi </a> # link eklemek icin
+<bold> burasi bold olucak </bold> # bold
+<em> italic yapmak icin </em> # italics
+</body>
+</html>
+Semantics tags
+semantic tags # section,aside,time,footer,row,header
+Video/Audio
+Canvas
+Cookie
+CSS
+margin
+padding
+border
+outline
+

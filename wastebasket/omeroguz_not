@@ -1,0 +1,104 @@
+python ilk komutlar 
+
+
+virtualenv indir- pip install virtualenv
+
+mkdir env
+cd ~/env
+virtualenv herhangibirşey(petimebak)
+source herhangibirşey(petimebak)/bin/activate
+pip install herhangibirpaket(django, markdown, etc.)
+deactivate 
+
+pip python'ın paket yükleyicisi
+örnek pip komutları:
+
+pip search <paket>
+pip install <paket>
+pip uninstall <paket>
+pip freeze (hangi paketleri kurduğunu gösteriyor ve >herhangibirşey(requirements).txt dosyasına kopyalıyor)
+pip install -r <dosya>
+import etmenin yollar:
+	1) from (dosya) import (function)
+	2) from (dosya.py)
+	3) import (dosya)
+		ama modülü transfer ediyorsun bu şekilde ve içindeki fonksiyonlar için: (dosya).(function) 
+
+python lisetler =>  benim_listem = ["abc",4 ,42, "naber", "ben"]
+			listenin idex numarası=>  0   1   2     3        4
+			listenin elemanına ulaşmak için=> benim_listem[(index numarası)] 
+			slicing: benim_listem[(start):(stop):(step)]
+len(variable) => variable'ın boyunu gösterir
+dir(listenin_adı) => liste ile yapılabileceğin methodları gösteriyor
+	(listenin_adı).append("variable") : listenin sonunda ekliyor
+	(listenin_adı).count("variable") : listedeki aranan variable'ın sayısını veriyor
+	(listenin_adı.insert((index numarası),"variable") : listenin herhangi bir sırasına ekliyor
+	(listenin_adı).pop("variable") : listede gösteriyor ve listeden siliyor
+	(listenin_adı).remove("variable") : listeden siliyor
+	(listenin_adı).reverse("variable") : listenin sıralışını ters çeviriyor
+	(listenin_adı).sort() : dağınık listeyi sıralıyor ve eski halini permenant olarak bozuyor
+	(listenin_adı).sorted() : dağınık listeyi sıralı kabul edip öyle veriyor
+liste içinde liste yapılabiliyor : liste1 = [[1,2,4,5],2,34,[2,5,6,3]] gibi
+
+for loop python'da koşulsuz listelerde mesela basmak için kullanılıyor	
+	örnek : for (herhangi bir variable adı) in (liste adı)
+		eğer liste içinde liste varsa: for (variable1) in (liste1):
+											for (variable2) in (liste2):
+												print (variable)
+		veya Ör: for i, (variable) in enumerate(liste)
+					print i, (variable)
+
+text file okuma => open("data.txt").read()
+	data.split() => büyük stringi bölüp onu parçalara ayırıyor
+
+
+dictionary'lerde dic={"something":"variable", "something1":"variable", etc.}
+	bilgi eklemek için dic["something2"]="variable"
+	sozluk methodları:
+		sozluk.clear() = verileri siliyor
+		sozluk.get("Something","Variable") => eğer something sözlükte yoksa variable'ı basar, varsa değerini variable yapar
+		sozluk.has_key("variable") => sozlukte olup olmadığını true false olarak döndürür
+		sozluk.items() => sözlükten liste yapar
+		sozluk.keys() => sözlükteki ({"something":"variable"}) something'i verir
+		sozluk.values() => sözlükteki ({"something":"variable"}) variable'ı verir
+
+tuple sozluk gibi ama içeriği daha sonradan silinemiyor 
+	"tuple" = ("variable1","variable1", "variable3")
+
+ipython komutları
+	history : yazdığın komutları veriyor
+	help("something") : sana uzun açıklamasını veriyor
+	"object". &	<tab> : o objectle yapabileceğin built-in functionları veriyor
+	"method".? : dediğimizde method'un açıklamasını veriyor
+
+set'lerde => "set" = {"variable1","variable1", "variable3"} bir küme yapıyor
+	kümede tekrarlı elemanlar gösterilmez
+	set'lerde matematik işlemleri yapılabilir
+	set.union("set2") ile iki küme birleştirilebilir
+	a list iken:
+		a == set(a) ile listde tekrarlı eleman olup olmadığı doğrulanabilir
+
+
+
+instance: sınıftan üretilmiş nesne, örnek
+attribute: nesnelerin(örneklerin) sahip olduğu değişkenler
+method: nesnelerin(örneklerin) fonksiyonları
+class: örneklerin nasıl üretildiğini tanımlayan teorik dayanak
+function: belirli işleri yapmak şçşn yazılmış kod blokları
+mutable variables: içeriği değiştirilebilir değişkenler
+inmutable variables: içeriği değiştirilemez değişkenler
+inheritance: bir sınıfın tüm özelliklerini içeren yeni bir sınıf türetme işlemi
+multiple inheritance: birden fazla sınıfın özelliklerini içeren yeni bir sınıf türetme işlemi(mixins)
+composition: bir sınıfın özelliklerini, başka bir sınıfın özelliği olarak kullanma tekniği
+
+
+DJANGO
+
+Model: Veritabanı katmanıyla iletişim sağlar
+View: Kullanıcı etkileşiminin olduğu katman
+Template: HTML yanıtlarının işlendği bölüm
+
+django-admin.py startproject "projeadı" : yeni bir proje oluşturur
+python manage.py syncdb : yeni veritabanı oluşturur
+rm -rf db.syncdb.sqlite3 : veritabanını siler
+python manage.py runserver : server'ı aktif hale getirir
