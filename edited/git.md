@@ -26,16 +26,28 @@ Git ve Github kullanmak cok açıdan çok avantajlıdır. Bir deponun, ya da pro
 
 #### Komutlar
 
-> $ **git init**: 			# Bilgisayardaki bir dosyayı repo yaparsınız.
+> $ **git init**: 			
 
-> $ git clone URL			# Olduğunuz dosyaya internette olan bir repoyu klonlarsınız.
+Bilgisayardaki bir dosyayı repo yaparsınız.
 
-> $ git add bla.txt			# bla.txt'i commit için eklemiş olursunuz
+> $ git clone URL			
 
-> $ git commit -m "yorumlar"	# bla.txt'i commit yapmış oluyorsunuz
+Olduğunuz dosyaya internette olan bir repoyu klonlarsınız.
 
-> git pull origin master	# birleşmemiş değişiklikler varsa ilk önce onları merge eder
+> $ git add bla.txt		
+ 
+bla.txt'i commit için eklemiş olursunuz
 
-> $ git push origin master	# master branch'ine yaptığınız commit'i gönderirsiniz
+> $ git commit -m "yorumlar"	
+
+bla.txt'i commit yapmış oluyorsunuz
+
+> git pull origin master	
+
+birleşmemiş değişiklikler varsa ilk önce onları merge eder
+
+> $ git push origin master	
+
+master branch'ine yaptığınız commit'i gönderirsiniz
 
 
