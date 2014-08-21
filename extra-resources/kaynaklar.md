@@ -1,12 +1,21 @@
 ### Ekstra Kaynaklar
 
--------
+* https://docs.python.org/2.7/index.html
+
 
 #### Kitaplar
 
 * [PYTHON - Fırat Özgül](http://kamp.linux.org.tr/2014/)
 
 
+#### Konuyla ilintili baska seyler
+
+* http://www.dbpatterns.com/
+* http://www.w3schools.com/
+* http://nvie.com/posts/a-successful-git-branching-model/
+* http://git-scm.com/
+* http://www.slideshare.net/lahavlevelaislabonita/django-introduction-15778278
+* http://danielkummer.github.io/git-flow-cheatsheet/
 
 
 
