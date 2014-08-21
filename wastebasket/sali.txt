@@ -1,0 +1,18 @@
+yeniden bir proje oluþturma
+
+virtualenv ~/env/blog
+soruce ~/env/blog/bin/activate
+pip install django
+cd ~/projeler
+django-admin.py startproject blog
+cd blog
+python manage.py startapp main
+			  
+			  
+python manage.py syncdb  database oluþturur
+			  
+
+			
+			  
+settings.py
+INSTALLED_APSS =(.......,'main')	------------oluþturduðumuz app 'i ekliyoruz settings'e

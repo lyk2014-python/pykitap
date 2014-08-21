@@ -1,0 +1,66 @@
+127.0.0.1
+kendi host un 
+her aygıta bir ip atayabiliyorsun
+sonra karşılıklı tanımlama için TCP/IP kullanlıyor (194.27. 343.46)
+ya kendin yapıcaksın ya da DHSP ile yapman gerekiyor.Bu servis sana ip'n bu olucak diyebiliyor
+
+aynı ağ içerisinde iki bilgisayarın aynı ip adresine sahip olması mümkün değil.
+mesela elimde 10.47.92.23 her biri 255 lik yeri var.elimde tanımlı bir data yoksa default gate e gider.
+
+/usr/sbin/traceroute kamp.linux.org.tr --> gittiği yolu ve kaç saniyede geçtiğini gösteriyor
+
+ip adresinden domain bulma -->  nslookup 139.179.139.181  
+			        nslookup (ipaddress)
+				dig -x 139.179.139.181
+				host 139.179.139.181 
+bi ip nin karşılığı iki tanedir bunlar da dns e tanımlanmıştır
+ip'nin farklı kapıları var. bu ip de birden fazla servis çalışabilir.
+tarayıcılar 80.porttan bağlanır ama bunu değiştirirsen belirtmen gerek 
+less /etc/services --> portların yerlerini burdan bulabilirsin.
+bir portta birden fazla program çalışamıyor
+whois 139.179.139.181 diyince vermiyor 
+
+dns çözmek için ^^nslookup ve ^^dig 
+
+ /etc/resolv.conf  --> burdan dns sunucularını ayarlayabiliyorsun 
+ 
+ nslookup satırına düştükten sonra burada istersek IP’den alan adı sorgusu ya da alan adından ip sorgusu yaptırabiliriz.
+
+> www.itu.edu.tr
+Server:  deneme.abc.com
+Address:  192.168.2.1
+
+nslookup google.com.tr --> 4 tane ip adresi veriyor yetmediğinden dolayı
+
+istemcide çalışanlar				sunucuda çalışanlar
+html									asp
+css									php
+									node
+									ruby/rails
+									python
+									java ee 
+									go
+									
+bazılarımızda google daha enter a basmadan aratmayı bitiriyor burada ajax teknolojisini kullanmış oluyor.
+istemci----(html)----->sunucu
+web tarayıcıları html den anlıyor
+
+istemciden aldığımız tüm veriler değişkendir.ama adamdan aldığın veriye güvenerek ilerlersen bi problem olabilir.
+mesela banka işlemi javascripti filtresini istemciye koyuyorsun ama tamamen ona güvenmiyorsun her an sunucuda da bunu kontrol ediyor yani iki kere kontrolden geçmiş oluyor.
+
+html-css neden vazgeçilmez--> tasarım katıyor
+
+ölçeklenebilir tema --> büyütüp küçültünce ekrana oturan tema
+
+review:
+
+her bilgisayaarın kendi ipsi var
+ifconfig
+route 
+kendi ip’miz farklı bir yandan da online ip sorgularsak aynı ip adresini veriyor. neden?
+iki fraklı ip adresi bu sadece iç ağ bağlantısı için kullanılıyor(10.*.*.*)
+rezerve edilmiş bloklar (192.168.*.*)
+sadece iç ağlarda kullanılan dışarı çıkmayan şeyler için(172.16.*.*)
+her halukarda dışarı çıktığımızda bu üç ip adresten biri olamaz bunlarfake
+
+									
