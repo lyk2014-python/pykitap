@@ -1,0 +1,92 @@
+% D2L3, LKD - Kamp ’14
+% Ceyhun Andac
+% 12.08.2014
+
+1st Part
+========
+
+$<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>örnek</h1>
+  <a href="http://#lipsum.org">lipsum.org
+  
+  <ul>
+  <li><a href="#">Anasayfa </a></li>
+  <li><a href="#">Hakkımda </a></li>
+  <li><a href="#">İletişim </a></li>
+  </ul>
+<p>
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+</p>
+
+<table border="1">
+  <tr>
+    <td colspan="3">BASLIK </td>
+  </tr>
+  <tr>
+    <td rowspan="2">A </td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+</table>
+
+</body>
+</html>$
+
+2nd part
+========
+
+semantic tags: section, aside, time, footer, header... data mining, web
+mining GIMP, Inkscape ile sitelere gorsel hazirlamak da mumkun.
+
+CSS:
+
+$<!doctype html>
+<html>
+  <head>
+    <title>Ornek</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <section id="container">
+      <header><h1>Logo<h"></header>
+      <nav></nav>
+
+      <section id="content-container">
+        <section id="content">
+          content
+        </section>
+
+        <section id="sidebar">
+          sidebar
+        </section>
+      </section>
+    <footer>footer</footer>
+    </section><!--container-->
+  </body>
+</html>$
+
+RGBA -\> ..-..-..
+
+margin
+
+padding
+
+border
+
+outline
+
+float
+
+comment line at CSS /\* \*/
+
+CSS hizli, guzel ama daha hizlilari var: LESS, Bootstrap, primefaces
+(for JS), Jquery

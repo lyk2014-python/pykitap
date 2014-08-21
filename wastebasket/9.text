@@ -1,0 +1,20 @@
+% D4L1, LKD - Kamp ’14
+% Ceyhun Andac
+% 14.08.2014
+
+1st Part: Git
+=============
+
+once workspace’de bir dosya olusturulur ya da github’dan forklanan dosya
+indirilir.
+
+sonra ’git add’ ile dosya stage’e alinir. stage’den de ’git commit -m
+"commit ne ise artik"’ seklinde commit yapilip isi tamamlanir. artik
+islem tamam.
+
+degisiklikler -am ile hem stage eklenip hem de direk commitlenip
+cikarilabilir.
+
+"git branch brach-adi" ile yeni branch acilir. yeni branch’le eski
+kisi-adi" komutu verilir. icinde olunan branche gelir diger branch’ler
+merge komutu ile.

@@ -1,0 +1,32 @@
+% D4L2, LKD - Kamp ’14
+% Ceyhun Andac
+% 14.08.2014
+
+devam ediyor: Git
+=================
+
+’git revert son-commit-numarasi -m "commit her ne ise artik"’ ile
+istedigimiz commit (sadece o!) geri alinabilir. reset atilirsa istenilen
+bir noktadan oncesine donulebilir cesitli seviyelerde. hepsinde depo
+kesin gidiyor. "reset –soft commit-id": stage’e duser istenen nokta.
+"reset –mixed commit-id": stage de gider, commit workspace’e gider.
+"reset –hard commit-id":workspace dahil her sey gider.
+
+’git rebase master’: commit sirasiyla yapilan degisiklikleri icinde
+bulunulan branch’e aktarir. merge’den farki merge’in sira gozetmeden
+branch’te yapilanlari direk kendi icine sondan almasi.
+
+fast forward: tek adimlik merge’ler, master’da branch’teki bir kodun
+degistirilmedigi bir durumu gozonune alalim, yalniza minik
+birlestirmeler saglayacagi icin buna fast worward denir. gercekten merge
+yapildiginda icerisinde commit olmayan bir mesaj uretilir. buna merge
+mesaji denir. merge mesaji uretilmemesi icin once rebase sonra merge
+yapilir. boylece son merge adimi fast forward haline gelir, merge mesaji
+verilmez.
+
+git commit –amend -m "yeni commit" ile son yapilan commit mesaji
+degistirilir.
+
+Etiketleme: git tag -a v1.0 -m "1.0 surumu cikartildi."
+
+git stash: yapilan degisikliklerle stage’i kirletmemek icin...

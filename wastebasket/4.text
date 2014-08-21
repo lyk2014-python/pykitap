@@ -1,0 +1,158 @@
+% D2L2, LKD - Kamp ’14
+% Ceyhun Andac
+% 12.08.2014
+
+1st part
+========
+
+A client has give a web site from a server to a last user. How can
+server or anyone else know how long the user stays in the website?
+
+The server cannot know if you don’t make traces.
+
+http’de bir bağlantı ile diğeri arasında hiçbir ilinti yok. cesitli
+mantikli tahminler yapilabilir, bunun disinda kesin bir saptama
+yapilamaz. peki ben bir sayfadan digerine herhangi bir degisimi nasil
+aktaririm? bir hmtl sayfasindan digerine gectiginiz anda her seyi
+unutuyorsunuz.
+
+get: bir degiskeni alip bir sayfadan digerine goturuyor.
+
+post: get’le ayni isi yapiyor. get’e gore daha uzun veri
+gonderebiliyoruz. istemciden sunucuya istek giderken bir de yaninda ek
+"post verisi" gidiyor. adres satirinda gorunur duzayde acikta gitmiyor.
+
+cookie: kullanicinin bilgisayarina bir "kurabiye" birakiyor istemci.
+sonra ayni kullanici tekrar geldiginde istemci kurabiyesine bakiyor,
+bulursa senin yeniden geldigini anliyor. sayfadan sayfaya aktarilacak
+degiskenleri tutuyor. alip bir kullanicidan digerine konuldugunda ayni
+sitelerde ayni cookieleri kullanabilirim. kullanici istedigi gibi
+degistirebilecegi icin cookie’den gelen veriye guvenilmez.
+
+peki iki sayfa arasinda guvenebilecegim hicbir sekilde bilgi, degisken
+degeri saklayamayacak miyim?
+
+MAC adresi: bilgisayarin ag karti icin stabil bir bilgi.
+
+kullaniciya bir id atayayim. bu id’yi cok uzun sureli atamayayim ama,
+kisa sureli atayayim. ip’sini de kaydedeyim. adam sonra bir sonraki
+sayfa icin tekrar geldi. islemleri yaptim ama bu kez baska bir random
+id’ye atadım. bu da yuzde yuz cozum degil ama en iyisi.
+
+2nd part
+========
+
+bir siteye misal amazon’a gidiyorum, kitap bakiyorum, aliyorum. sonra
+amazon bana sunlar da var diye mail atiyor ki ayni yazarin vs.
+kitaplari. nasssi oluyor bu? cookie’ler uzerinden oluyor bu. cookie’nde
+tuttugu bilgiden kelli yapiyor bunu. oturumlardan cikis yapilmadgi
+surece google, facebook vs. seni takip ediyor. ama nasil?..
+
+istemci bilgi yolluyor telefon, explorer, ubuntu vs. gibi. bunun
+dogrulugu mechul. peki nasil yapiliyor bu yaniltma durumu ya da siteler
+nasil anliyor nereden gelindigini? bu yapilabilir, bazi siteler
+ozellikle belli tarayicilari isteyebiliyor vs.
+
+html, css etc.
+==============
+
+html
+----
+
+yillarca html yegane gorsel ve metin web islemcisi oldu. CSS cikinca
+isler degisti. HTML5 de kendini buna gore modifiye etti.
+
+CSS: cascading style sheet, view temel kullanimi olarak.
+
+masaustu ortami da CSS ile yazilabiliyor.
+
+Bir de benzer ise yarayan javascript var. JS controller islemi yapiyor
+oncelikli olarak. Sunucu ortaminda da calisabilmekle beraber esas olarak
+tarayici uzerinde calisir. Bicimlendirmeye de katki saglar ama CSS
+varken gerek yok.
+
+ctrl+u: viewing source (for chrome)
+
+<!doctype html\> -\> this is for html5
+
+<html\>
+
+<head\> <title\> ....alsdjasld...<title\>
+
+<meta charset = "UTF $=$ 8"\>
+
+</head\>
+
+<body\>
+
+</body\>
+
+buyuk harfle yazilmaz. tarayici hml kodunu goruyorsa hata verebilir.
+
+tagler:
+
+$<p>$ for paragraph
+
+$<h1>$ for header (from h1 to h6), defining sections
+
+$<br/>$ for breaking
+
+lists:
+
+$<ul>$ or $<ol>$ unordered list, ordered list
+
+$<ul>$
+
+$<li>$ asldkasldkjsadsa$<li>$
+
+$<ul>$
+
+$<a href="url">$ giving links
+
+center, font, frameset, frame
+
+$<table>$
+
+$<tr>$
+
+$<td>$ 1.1 $</td>$ . . . $</tr>$ $</table>$
+
+baslik icin td degil th
+
+sutun/satir birlestirmek icin colspan/rowspan $=$ "number of
+condemnating columns/lines" birlestirmeler ve diger satir sutun
+degerleri ayni sirada yaziliyor.
+
+$<form action="asdaduhaıuh" method>$
+
+html basics:
+
+get
+
+post
+
+put
+
+del
+
+trace
+
+input types: "text", "radio", "checkbox", "submit", "password", "reset",
+"hidden"
+
+$<select>$, $<option>$
+
+$<frameset>$
+
+the solution for this table things is $<div>$
+
+id ve class onemli...
+
+bir id yalnizca tek bir seye atanabilir.
+
+class’lar bir eleman icin birden fazla olabilir. ayni zamanda bir class
+birden fazla eleman icinde yer alabilir.
+
+router, article, video, time...
+
+DOM: document object model...

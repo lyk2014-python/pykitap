@@ -1,0 +1,52 @@
+% D1L1, LKD - Kamp ’14
+% Ceyhun Andac
+% 11.08.2014
+
+A Section
+=========
+
+yazılım nedir? bilgi sisteminin elle tutulamayan parçası derleme <-\>
+tercüme derleyici de yazılım derslenmiş "object" kodda değişiklik mümkün
+değil. genelde verilen object kod, satılan lisans bir yazılımın yenisini
+yapacağımıza yetersiz yerlerini tamamlasak? -\> bunun için kaynak kod
+gereksinimimiz var.
+
+özgür bir yazılımın temel özellikleri: kullanım, çoğaltma, dagıtım,
+değiştirme GKL (GPL) genel kamu lisansı: yegane temel önkoşulu GKL olan
+bir kod, yenilendikten sonra da kullanıcıyı (her kim ya da kimler
+olacaksa) yine GKL ile verilmeli BSD license çift lisanslama gerek GPL
+2.0 vr 3.0 için "Çzgür Yazılım ve Linux Günleri" Mart-Nisan
+ozgurlisanslar.org.tr
+
+web programming - D1L1 ———————-
+
+writing a program on web ex: project management environment, like
+redmine how long does it take? 1 day? 1 month? 1 year?
+
+one have to have knowledge about what he/she will do. redmine has been
+coded with rails, I can handle the program I aim to write from there.
+how long does it take to learn rails? reading and understand a source
+code !rare -\> sometimes it’s easier to write a cde from its basics then
+manipulating one written before
+
+"address" enter! in a browser, that’s what someone always do. but then?
+-\> DNS (domain name system)
+
+DNS is working with ip addresses. How can someone reach the ip adrress
+of a host?:
+
+ping host whois traceroute nslookup dig -x
+
+ping: ISMP packet, how long does it take going from client to server?
+
+a computer does not have an ip address, network cards have ip addresses.
+"local host 127.0.0.1" TCP/IP protocol for connecting taking an address
+for a computer; you can define it by hand, or "call" DHCP DHCP: "I can
+not take an ip by myself, you give it yo me one." access point
+
+"default gateway": nasil gidecegimi bilmedigimde gonderildigim yer.
+
+—.—.—.— max. slots for every part is $256 = 2^8 => 2^{32}$ ilk uc parti
+ayni olan ip’ler ayni yerel agdadirlar.
+
+for learning an ip: "ip a", "ifconfig"
