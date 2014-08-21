@@ -17,4 +17,4 @@ sudo apt-get install vim(Vim bir metin düzenleyicidir.)
 - #git branch new_branch  
 - #git branch(hangi branch de olduğumuzu gösterir)  
 - #git checkout new_branch(branch değişimi için)  
-- #git merge new_branch(branc birleşimi yapar) 
+- #git merge new_branch(branch birleşimi yapar) 
