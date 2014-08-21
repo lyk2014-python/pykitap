@@ -9,7 +9,8 @@ sudo apt-get install vim(Vim bir metin düzenleyicidir.)
 - #vim git.txt (bişeyler yazın kaydedin)
 - #git add git.txt
 - #git commit -m "yeni bir git.txt dosyası eklendi"  
-- #git status
+- #git status  
+- 
 ##BRANCH  
 
 - #git branch(git init yazıldığında otomatik olarak oluşur)  
