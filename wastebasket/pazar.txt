@@ -1,0 +1,414 @@
+/////////////Sabahhhhhhhhh//////////
+
+in python everythin is an object
+
+class  Student(object):
+
+
+def __init__(self , name , age)
+
+self.name = name
+
+self.age = age
+
+self.course = [] 
+
+
+
+
+
+
+
+
+
+/////////////
+
+listeler
+
+[] , ["asd" ,1 ,True]
+
+b=["a"] , b=[index]
+
+
+b.append(item)        b[start: step :stop]
+
+b.count(item)
+
+b.insert(i , item)
+
+b.pop(i)
+
+b.remove(item)
+
+b.(reverse) ,  b[::-1]
+
+b.sort()  , b.sorted
+
+////////Dictionary ------->Hashmap  (dict)/////////
+
+  sozluk ={ "apple" : "elma" ,
+   "pen"  :  "kalem" ,
+   "orange" : "portakal" }
+   
+   sozluk ["apple"] ---->elma
+   sozluk ["orange"]----->portakal
+   
+   
+   del soluk["water"]
+   
+   if "pen" in sozluk:
+	print"sozlukte var"
+	
+	
+	if not "pen" in sozluk:
+	print"sozlukte yok"
+	
+	sozluk.items()
+	
+	
+	for kelime , anlami in sozluk.items():
+		print "%s kelimesinin anlamý %s" %(kelime , anlami) 
+		
+		
+	sozluk.keys()
+	[orange pen water]
+	
+	sozluk.values()
+	[portakal kalem su]
+	
+	
+	////////////interactive pythnon console
+	
+	
+	%history  
+	
+	
+	
+	tuple??python
+	
+	
+	a =(1,2,3,4)
+	
+	type(a)----->tuple
+	
+	ýnmutable  objects
+	
+	
+	Sets
+	
+	n={1,2,4,21,5}
+	
+	a.union(b)
+	
+	b.difference(a)
+	
+	a.interset(b)
+	
+	
+	//////////
+	
+	Strings
+	
+	metin ="selam"
+	
+	metin.upper()  SELAM
+	
+	metin[2:]      lam
+	
+	metin.isdigit ---false
+	
+	metin.replace("se","me")   melam
+	
+	
+	metin.startswith("se") -------true
+	
+	.endswith("lam")------true
+	
+	
+	
+	cumle="hava cok guzel"
+	
+	cumle.split(" ")    	["hava", "cok", "guzel"]
+	
+	",".join(["sda","asda","asda"])  "asdadasdaasd"
+	
+	
+	
+	
+	
+	
+	
+	/////////////////////////////////////////
+colors ={ "blue" : "mavi" ,
+   "black"  :  "siyah" ,
+   "orange" : "turuncu" }
+   
+   
+coion = 1
+   
+   
+while coion != 0 :
+
+	keyboard = raw_input("Enter your word that you want to search :")
+	
+	for keyboard in colors :
+	
+		if keyboard in colors :
+		   print "Your word is %s" , colors[keyboard]
+		  
+		if not keyboard in colors :
+		   print " doesnt exist your word!"
+	
+////////////////////////////////////////////////////	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+url = "http://kamplinux.org/index.html"
+
+
+
+
+
+def parse(url):
+	 parts = url.split("/")
+	 
+	 protokol = parts[0].split(":")
+	 
+	 alanadi = parts[2]
+	 
+	 uzanti = alanadi.split(".")[-1]
+	 
+	 yol = "/" +parts[-1]
+	 
+	 return dict(
+		protokol = protokol , 
+		
+		alanadi = alanadi ,
+		
+		uzanti = uzanti ,
+		
+		yol = yol)
+		
+print parse(url)
+		
+		
+		
+		
+/////////////
+	
+	
+class Student(object):
+	def __init__(self , name , age):
+		self.name = name
+		self.age = age
+		self.courses = [] 
+	def print_info(self):
+		print "name: %s , Age: %s" %(self.name , self.age)
+		print "Course : %s"  %  ",".join( self.courses)
+	def add_course(self , course_name):
+		self.courses.append(course_name)
+		
+ali = Student("ali" , 22 )
+ali.print_info()
+ali.add_course("mat")
+ali.add_course("fizik")
+ali.print_info()
+
+
+	///////////////
+	
+	
+	
+	
+	
+	__str__
+	__repr__
+	
+	
+	/////////////
+	Sýnýflar
+	
+	
+	instance sýnýftan üretilmiþ nesne örnek
+	attribute nesnelerin
+	
+	
+	
+	
+	//////////////////////////////////
+	Range
+	
+	
+	range(start , stop , step)   döndürüyo  integer
+	
+	range(10) ----------> [0,1,2....,9]
+	
+	range(2,10) --------> [2,3 ....,9]
+	
+	range(2,10, 2) --------> [2,4,6 ....,9]
+	
+	
+	List Comp.
+	
+	a = [x for x in range(10)]
+	
+	a = [x**2 for x in range(10)]     [0 1 4  9 ....]
+	
+	Dictionary comp.
+	
+	
+	
+	
+	
+///////////////////////////////////
+
+Fonksyonal Programlama
+
+Lambda
+
+
+def isim():   ---------normalde
+	return
+	
+	
+x = lambda b:b           lambda alacaðý parametre : dönceði deðer
+
+x(5)       ----5 döner
+
+
+
+
+
+topla = lambda a , b : a+black
+
+topla(5,6)
+
+
+
+
+//////////
+Map &Filter
+
+map(lambda x:x**2 , range (10))
+																		lambda yararlý!
+[0 ,1 ,4 ,9 ,16 ................]
+
+map(funciton , list)
+--------------------------------
+range(5) = [012345]                     def karesini_al(x):
+											return x =x**2		
+map (karesini_al , liste)
+
+------------------------------------------------
+
+	isimler =[["fatih" , 22],
+			   ["ali" , 25] ,
+			   ["halit" , 55] ,
+			   ["ayse" , 30] ]
+			   
+sorted(isimler key = lambda x=x[1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
