@@ -1,0 +1,26 @@
+cd ornek-repo
+git init
+git branch
+touch README.md
+git status
+touch VERSION.txt
+git status
+git add READ.md 
+git status
+"""ekledik"""
+"""üç farklı perde var.ikiden ilkine geri alabilirsin işlemi"""
+git commit -m "initial commmit gönderildi"
+"""master yani3. perdeye gönderildi"""
+git remote kullanımı ""bir depo üzerinde birden fazla çalışmak isteyen varsa remote servise göndeririz
+github ve birbucket kullanıyorıuuz genelde."""
+git push * *
+
+git remote add origin git@github.com:lyk2014-python/git.example.git
+git push -u master 
+git clone git git@github.com:lyk2014-python/petimebak.git
+
+git checkout branchname
+git merge branchname
+
+git flow
+apt-get install git-flow
