@@ -1,0 +1,36 @@
+% D10L1, LKD - Kamp ’14
+% Ceyhun Andac
+% 22.08.2014
+
+Django framework’unde Heroku’ya site deploy etmek icin yapilmasi
+gerekenler. Heroku’nun sitesinden de tutorial seklinde ulasilabilir.
+
+deployment
+==========
+
+\* source  /env/petimebak/bin/active
+
+\* pip install django-toolbelt
+
+\* cd  /projeler/petimebak (ya da projeniz her neredeyse dizine gidin)
+
+\* pip freeze \> requirements.txt
+
+\* touch Procfile (web:gunicorn petimebak.wsgi \_log-file)
+
+\* google’a girip "heroku django getting start" diye aratilip gelen
+degisiklikler settings.py’a uygulanir.
+
+\* heroku create
+
+\* git add .
+
+\* git commit -m "add heroku updates"
+
+\* git push heroku master
+
+\* heroku psiscale web=1
+
+\* heroku logs
+
+\* heroku run python manage.py syncdb
