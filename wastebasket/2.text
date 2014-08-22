@@ -1,0 +1,67 @@
+% D1L2, LKD - Kamp ’14
+% Ceyhun Andac
+% 11.08.2014
+
+A Section
+=========
+
+traceroute: bir ip’den öbürüne giderken geçilen yerler ve aralarda
+harcanan zamanı veriyor bi ip ’nin üstünde birden fazla domain name
+bulunabilir, bu yüzden dig -x, host vs. ile gidilen ip-\>hostname terse
+dönemeyebiliyor. TCP/IP alan adı üzerinden yürür. bir ip üzerinde birden
+fazla servis de verilebilir. bir servis karmaşası olmaması için port
+numaraları standardize edilmiş durumda. örn: 80 - http (tarayıcılar
+misal, web sitelerine böyle girer.)
+
+misal, 80 i 81 yapalım bir şekilde. o zaman kamp.linux.org.tr:81 ile
+girmemiz gerek.
+
+whois komutu, hostname’den ya da ip’den sahibin kim olduğunu, neci
+olduğunu vs söylüyor.
+
+web server aslında sadece bir istemci-sunucu mimarisi. arada problem
+yaşanması, uygulamayı da etkiler.
+
+nslookup: name server look up /etc/resolv.conf host için hangi dns
+sunucusuna soru sorulacak browser tarafından, bu yazıyor burada.
+/etc/hosts elle bu ip’ye şu host karşılık gelsin diye
+tanımlayabiliyorsunuz. browser dns sunucusuna sormadan evvel bu
+dosyadaki eşleşmelere bakıyor. aynı alan adı için farklı ip’ler döndüren
+farklı sunucular olabilir. sunucu kaldırmadığı noktada dns sunucu birden
+fazla ip döndürebilir ya da sunucu bölünebilir (yani sunucuyu kullanan
+onu bölebilir).
+
+ping atma bir host ile yaşıyor mu diye iletişim kurmayı sağlıyor.
+
+web sitesi: istemci <.......\> Sunucu http: hypertext trasfer protocol!
+
+browsers(bilmediğim): links, tor (!!!), maxton, dolphin sunucu: apache(
+technologies: http\*, css\*, php$, asp$, javascript\*,
+node.js$, ruby/rails$,
+pyhton/django$, actionscript*, tomcats gibi java uygulamaları$, flash\*,
+go$, ajax$, CGL, Perl$...
+$ sunucuda çalışanlar, \* istemcide çalışanlar
+
+hangileri istemci hangileris sunucu?
+
+bir web sayfasına bağlanırkene... web sunucusu, sayfaların olduğu dizine
+götürüyor istemciyi. web sunucusu dosyayı olduğu gibi istemciye
+veriyor,istemci de kullanıcıya gösteriyor.
+
+Sunucuda ne çalıştırırsan çalıştır çıktısı, tarayıcıya giden "html"
+olur. html, css, js bunların yerine başka bir şey koymak fevkalade zor.
+
+istemcideki bilgiye sunucu nasıl erişebilir? bir seçenek kullanıcının
+ip’sinin yerine bakmak olabilir. diğer türlü de js ile kullanıcı
+bilgisayarından bu bilgiyi alabilirim.
+
+sunucunun yaklaşımı tüm istemcilerin yalan söylediği üzerinedir. bu
+sebeple istemci için js ile yazılan kodların aynılarını sunucu için de
+yazmak zorundasınız.
+
+peki ya html ve css? istemci sunucudan hangi dosyaları resimleri
+çekeceğini nereden biliyor? html dosyalarının içinde sadece düz text
+olmayan, resim vs de olabilen birçok şey var. tarayıcı da bu html’i
+okuyor, okurken de bu istediklerini çekiyor. ya aradan bir dosya
+bulamazsa? geri kalanlar yoksa, olduğu kadarı oluyor. misal, css olmazsa
+fontlar, resimlerin duruşu vs. ayvayı yiyor.

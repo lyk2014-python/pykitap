@@ -1,0 +1,10 @@
+% D4L3, LKD - Kamp ’14
+% Ceyhun Andac
+% 14.08.2014
+
+devam ediyor: Git
+=================
+
+"git remote add origin git@github.com:squrlofcults/lkd~k~amp~2~014.git"
+komutunu git host’u(?) yaptigimiz dizinin icinde girersek, o
+dizindekileri github’a yuklemis oluyoruz.

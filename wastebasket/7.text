@@ -1,0 +1,14 @@
+% D3L2, LKD - Kamp ’14
+% Ceyhun Andac
+% 13.08.2014
+
+1st Part
+========
+
+JS single thread calisir. yani bir sey bitmeden baska bir sey calisamaz.
+"race condition", bir degiskene iki farkli fonksiyonun iki farkli deger
+atamasi gibi bir sikinti, olmayacagindan rahat calisir. C gibi
+dusunursek threading library yok gibi, yani multi threading, paralel
+programming yapamiyoruz. Javacsript definitonlari en uste alir. Yani
+iceride herhangi bi yerde, fonksiyon icinde, loop icinde, nerede olursa
+olsun tanimlanan bir sey, tum kod icin tanimlidir.

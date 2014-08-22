@@ -1,0 +1,63 @@
+///////////Sabah Python//////////
+
+cd ~/env
+virtualenv petimebak
+source petimebak/bin/activate
+
+pypi.python.org
+
+pip search paket
+pip uninstall / install  paket
+pip freeze  hangi versyonlar var
+
+pip install -r dosya adý   //////
+
+markdown ??
+
+/////////////öðle/////////////
+
+Python
+
+
+a++ yok    a +=1 var
+
+scope 4 boþluk
+
+
+///////////////////listeler////////////
+
+listem=[]
+
+listem = list()
+
+
+listem=[" acv" , "abf" ,"sada"]
+
+listem=["abc" , 15 , True] ////her veri tipini koyabilirisin
+
+
+listem[0] , listem[1], listem[3]
+
+listem[-1]
+
+
+listem[start : stop :step]
+
+////////////////////////
+
+
+#print meyveler[-2:] armut viþne son 2 eleman
+
+
+
+/////////////////////////////////////////////////////ÞEMA//////////////////////////
+
+
+
+
+
+
+
+
+
+

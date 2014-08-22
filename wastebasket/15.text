@@ -1,0 +1,26 @@
+% D6L1, LKD - Kamp ’14
+% Ceyhun Andac
+% 16.08.2014
+
+python-giris
+============
+
+Virtualenv: isletim sisteminin kendsine gore kurdugu python’lar icin
+isletim sisteminin yaptiklarini aradan cikararak bir python ortami
+saglar. "pip install virtualenv" ile kuruluyor.
+
+virtualenv dizin-adi yazarak bir klasor olusturulup bu dizinin icinde
+bulundugu dizinde source dizin-adi/bin/activate komutu verildiginde
+python artik bu dizinin icinde virtual olarak isletim sisteminden
+bagimsiz bir bicimde calisabilir hale geliyor. sudo vermeden direk pip
+install ile bu dosya altinda paket yuklemeleri ya da script
+calistimalari yapabiliyoruz rahatlikla. yine disaridaki dizin icinde
+"deactivate" komutu verdigimizde de virtual python’dan cikmis oluyoruz.
+
+pip python’un kendi paket yoneticisi, acilimi "python installer package"
+
+"pip freeze" ile kurdugumuz butun paketleri gorebiliyoruz virtualenv
+altinda. "pip freeze\>requierements.txt" ile de tum paket adlarini bir
+txt dosyasina atip sonradan baska bir ortam kuracagimizda bunu
+kopyalayip pip install requirements.txt diyerek tum paketleri tek
+seferde kurabiliyoruz.

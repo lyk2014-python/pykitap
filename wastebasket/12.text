@@ -1,0 +1,34 @@
+% D5L1, LKD - Kamp ’14
+% Ceyhun Andac
+% 15.08.2014
+
+devam ediyor: JS
+================
+
+Bir fonksyionun parametresi ya da o fonksiyon icinde tanimladigimiz
+degisken yalnizca o fonksiyon icinde gecerli. fonksiyonu geri
+cagirmadigimiz surece bu degiskeni ya da parametreyi baska bir yerde
+kullanamayiz. fakat basina "var" koymadan degisken tanimladigimizda
+degisken global olur ve tum program icin gecerli hale gelir.
+
+<button onclikck=""\> ... </button\>: bunun icine yazdigimizi click ile
+sayfa yapiyor. Bu da fucntion call oluyor. Console’da yaptigim ile ayni
+etkiyi yaratiyorum.
+
+<input id="..."\>: bunun icine aldigini ise fonksyionda direk
+cagirabiliyoruz.
+
+"onclick" bir event. ornegin kullanici sayfaya tikladigi zaman browser
+bir click event’i yaratir ve JS’e yollar. "keypress" keza bir eventtir.
+eventler icin handler yazilir ki bu handler’lar JS (veya baska bir dil)
+fonksiyonlaridir.
+
+fakat asil JS’in kullanilmasi gereken sekil: html hakkaten bizim
+"mark-up" language’imiz olsun. geri kalan, arkadaki tum her seyi JS’de
+yapalim.
+
+JS’in guzelliklerinden biri fonksiyon icinde fonksiyonun dumduz,
+func(func1()) seklinde cagirilmasi.
+
+jQuery ile bir sey yapilacaksa $(document).ready() icinde yapilmali,
+baska turlu olmuyor.

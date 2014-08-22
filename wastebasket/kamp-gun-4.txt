@@ -1,0 +1,24 @@
+mkdir git
+cd git/
+mkdir kamp
+git init
+git status
+git commit
+
+ls -la
+git branch local-->dallanmaya sebep oluyor
+git status ve tig te sorun var*******g
+
+localdeki değişikliği master a eklemek istiyorum
+bunun için merge komutunu kullan
+git merge local
+
+git checkout -b new_branch_name
+--> bi yerden bi yere gitmek için kullanabilirsin
+
+git revert
+git
+revert yaptığın adımları gerig almaya yarar
+
+cd git/kamp2/
+git i

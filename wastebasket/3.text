@@ -1,0 +1,61 @@
+% D2L1, LKD - Kamp ’14
+% Ceyhun Andac
+% 12.08.2014
+
+1st Part
+========
+
+Istemci tarafli islemler icin tarayici kullanmamiz gerekmekte.
+omerozkan.net firebug chrome menu-\> developer tools (DT): bu alet temel
+olarak sorun cozmede ise yariyor. dogrudan tarayici uzerinde gerekli
+degisiklikleri yapip hizlica cikti gormemizde ise yariyor. JS ile alınan
+hatalar bu DT’nin console’unda gozukuyor. elemenets’de html ciktisi
+gorunuyor. tarayiciya ilk giden html ciktisi ile buradaki farkli
+olabilir cunku burada js kullanildiktan sonraki versiyon goruluyor.
+herhangi bir partin uzarine tiklandiginda sagda css kisimlari goruluyor.
+tarayicida yapilan degisiklikleri css dosyasina kaydedebilen programlar
+da var. Network’de parca parca dosyalar ve sitede bulunduklari durumlar
+gosteriliyor. http’nin bilinen default mesajlari var. misal, 200-\>
+O.K.; 404-\> error, 403-\>log in error; 500-\>internal server error;
+401-\>unauthorized server error vs... bunlar burada da gecerli. sources-
+sources: html; content scripts: JS resim ve web icerigi icin kullanilan
+"creative commons" lisanlari var. pdf vs icin "non commercial" lisanlari
+var. lisans belirtilmemisse bu "public domain imis" denilebilir ama yine
+de dikkatli olmak gerekiyor. console aslinda javascript console’u.
+
+requester-side and server-side developing are totally different
+concepts. IP: "I"nternet "P"rotocol
+
+2nd Part
+========
+
+10.x.x.x internette hicbir yerde yok, yalnizca ic aglara ozel.
+192.168.x.x ayni sekilde sadece ic agda kullanilmak uzere rezerve.
+172.16.x.x daha az yaygin ama yine sadece ic aglarda kullanilan, disari
+cikarilmayan ip. daha sonra disari cikarken oradaki router disari
+cikilabilsin diye ip donusumu yapiyor. bu sebeple herkes bircok farkli
+ip’den cikiyormus gibi oluyor aglardan. "KKTC ornegi" peki bir agdaki
+bilgisayardan baska bir agdaki baska bir bilgisayara baglanmak
+istiyorsunuz. nasil olacak bu? bir ip uzerinden farkli servisler
+tanimlamak icin portlar vardi, ornegin 80 web servisi icindi. baglanma
+zamani icin de portlar o an icin farkli makinalara ataniyor. broadcast
+nedir?"agin olugu" tum aga yayinlanan bilgi. dolayisiyla broadcasttaki
+her bilgiyi herkesin okumasi mumkun agdaki. ssl sifrelemesi: web
+uzerinden paylasilan herhangi bir seyi sifrelemek icin bu kullaniliyor.
+Secure Socket Layer -\> https://... 80. porta degil 443. porta
+baglaniyorsun. neden tum bilgi https uzerinden saglanmiyor? daha agir,
+yavas; sifreyi acma geri gonderme belirli bir yavaslama sagliyor, evet,
+ama gozle gorulur bir yavaslama gunumuz iyi performansli
+bilgisayarlarinda yasanmiyor. bu sebeple son donemde "yeni yapilan tum
+web siteleri https ile yapilsin, devlet denetiminden kurtulalim"
+cagrilari yasaniyor. ama daha cok, kullanici login olduktan sonraki
+kismi ssl’e gecirmek kaynak sarfiyatini daha minimumda kullanmak icin
+kullaniliyor. ssl sifrelemesinde sertifikalar: karsinda baglandigin
+bilgisayarin kim oldugunu bilmeye ihtiyacin var. tarayici sertifika ile
+elimdeki bilgiyi kontrol ediyor: sertifikanin son kullanma tarihi,
+sertifikayi kimin imzaladigi (trusted authority’ler, tarayicinin
+lokalinde var bu imza "sirküleri"). yeni sertifika otoriteleri icin
+tarayicinin guncellenmesi ya da el ile ayarlanmasi gerekir. yani
+tarayicinin guvenliligi aslinda tarayicinin kullanilir oldugu
+bilgisayarin guvenilirligidir. setifika sadece kimlik dogrulamasi yapar,
+sifreleme her halukarda yapilir.

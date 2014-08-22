@@ -1,0 +1,68 @@
+% D8L1, LKD - Kamp ’14
+% Ceyhun Andac
+% 18.08.2014
+
+Hocalardan Fatih Erikli’nin evvelden hazirlamis oldugu bir sunumu bize
+tekrar yapmasindan mutevellittir.
+
+django
+======
+
+python dili uzerinde gelisitirilmis bir webframework django. (php’de)
+Codeigniter, (Ruby on) Rails, Symphony vs. baska web frameworklerdir.
+python’da da bircok ornek var: flask, bottle, cherrypy... bunlar iki
+tip, biri full stack, digeri micro framework. adlarindan anlasildigi
+gibi biri daha minimal digeri her istediginiz sagliyor bir web platformu
+icin.
+
+neden django:
+
+python!
+
+dry: kendini tekrar etme! django sadece bir webframework degil, bir
+felsefe!
+
+pluggable (uygulamalar)
+
+test edilebilirlik
+
+cok iyi bir topluluk (hizli yanit, acik kaynak kod, stabillik)
+
+avantajlari soyle siralanabilir: built-in admin uygulamasi, veri girisi
+yapabileceginiz bir ekran sunuyor size ve kurulumu cok basit; ORM
+(Object Related Mapping), SQL yazmak biraz bela ve riskli(?), ORM SQL
+yazmaya cok gerek birakmiyor, veri tabanina direk baglanmak yerine veri
+tabanina baglanacak bir sinif yaziyorsunuz, oluyor; GEODjango, lokasyon
+bazli sorgu yapma modulu, ;Internationalization (i18n), nam-ı diger cok
+dillilik, ceviri ekleme panali verebiliyor, kullanicilar tarafindan
+cevirilmesine olanak sagliyor.
+
+kurulumu: pip installl django
+
+tek proje dosyasi uzerinden tum siteyi yonetebiliyoruz.
+
+her django projesi altinda app denilen uygulamalardan olusur. bir
+kismini siz yazarsiniz, bir kismi da django’da yazili durumdadir,
+ekleyebilirsiniz.
+
+Uygulamanin yapisi:
+
+model
+
+view
+
+template
+
+model: uygulamanin veri tabani ile iliskisi bu katmanda belirlenir. bu
+aslinda bir class’tir. her katman modelde belirlenir.
+
+view: anasayfada gosterilecek olan seyler buradan doner. burada
+kullanici karsilanir ve ona yanit verilir.
+
+template: kullaniciya verilecek olan yanitin islendigi bolumdur.
+template’ler html sonuclar uretmeyi kolaylastirirlar.
+
+front-end developerlar bunu cok sever :)
+
+gelistirilen ayri bir dil sayesinde front-end’ciler python bilmeden
+tasarimi yapabiliyorlar.

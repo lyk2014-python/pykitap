@@ -1,0 +1,137 @@
+% D3L3, LKD - Kamp ’14
+% Ceyhun Andac
+% 13.08.2014
+
+Surum kontrol sistemi ne ise yarar? yazdigin kodun ne asamada neyinin
+degistiginin takip edilebilmesini saglamak, tarihce tutmak icin
+kullanilir.
+
+kodlardan birine geri donme ihtiyaci hissedildiginde donulebilmesi
+acisindan da cok onemli. birey olarak bunlari yapamazken, ekip olarak
+hiç hiçbir sey yapamiyor oluyorsunuz. bu problem ilk programcilik
+basladigindan beri var. bundan 42 yil once bu sorun farkedilip bu soruna
+cozum bulmuslar.
+
+fakat yil 2014, halen pek de kimsenin bu isi bildigi yok...
+
+peki bu sistemler nasil calisir, nasil kullanilir, ne tip ozellikleri
+var?
+
+becerilerine gore birkac ture ayrilirlar: senkron, asenkron
+
+senkron: bir programci ugrasirken baska kimse onunla ugrasamaz.
+
+asenkron: sonradan farklar cozulur. yetistirilmesi gereken islerde,
+hizlanilmasi acisindan gerekli. isi eline alan programci onceden yapilan
+degisikleri gozonune alip kendi kodunu ona gore yapar, kodlari
+birlestirir. birlestiremezse? conflict! el ile cozulmeli. bazi parcalar
+yeniden yazilmak durumunda olabilir.
+
+ikinci ayrisma: merkezi, dagitik
+
+merkezi: kodun bulundugu yalnizca bir depo var. herkes bu depoya
+commitler, bu depodan ceker.
+
+dagitik: ortaikta bir suru depo var. bu depolar arasinda birlestirme
+yapmak gerekir.
+
+piyasadakilerin icinde en iyisi ozgur yazilim olan. cunku sorun ciktigi
+zaman herkes toparlayip ozellik ekliyor. Git’i Linus Torvalds yazdi.
+Git’ten once de ozgur yazilimsal firmalar vardi. Bunlar genel olarak
+ozgur yazilim ortamlari olusturma
+
+depo/repository: kodlarin bulundgu ve bunlarin tarihcelerinin tutuldugu
+yer. bir veritabani olarak dusunulebilir, ama hicbiri aslinda gercek bir
+veritabani degil. dagitik’ta her kullanicida repo. var.
+
+herhangi bir klasorde "git init"-\> o dosyayi repo. ye cevirir.
+
+workspace: kodlarin gelistirildigi yer. repository’den kodlar cekilir,
+burada ugrasilir.
+
+commit/katki/gonderi: yaptigim degisiklikleri bir paket olarak depoya
+geri yolluyorum. bu bir commit. commit’in uzerinde, ne zaman, kim,
+neleri degistirdi bilgileri mevcut.
+
+atomic commit: kodun uzerinde bir dosya yok, bir suru dosya ile
+oynuyorsun herhangi bir sey yapabilmek icin, olabilir. yani bir commit
+icin gerekli olan tum dosyalari gondermelisiniz. birden fazla ozellik
+bir commit’e konmaz!
+
+commit aciklamasi: commitin ne icerdigi aciklanir. standardi ekip
+beraber olusturur. fakat belli basli temel standartlar mevcut. redmine,
+jila, git icin bu temel standartlarsiz bir sey yapamiyorsun.
+
+revert/geri sarma: bir commit yapildi, iki farkli ozellik degistirildi.
+eger tek commit icinde yaparsaniz bir tek ozelligi geri alamazsiniz.
+tumunu geri almak durumunda kalirsiniz. commitleri ayristirmak cok guc
+bir is olabilir.
+
+merge/diff: diff, iki text dosyasini karsilastirip aralarindaki farki
+gosterir.
+
+patch/yama: diff isinden cikan fark dosyasindan eski hale getirmek icin
+yaratilan dosya. "patch uheuhra.patch" seklinde uygulanir.
+
+tag/etiket: iliskilerin kavrasmal olarak takip edilebilmesi icin
+gerekli. geriye donuslerde cok etkili.
+
+branch: surum takip sisteminin asil sagladigi sey tam da bu. ana dala
+svn’de "trunk", Git’te "master" denir. release branch uzerinden surum
+cikardim. ana dal uzerinde hata ciktiginda release branh’ donerim,
+hatayi duzeltir ana dalin branch’iyle duzeltilmis dal merge edilir. buna
+"back port" denir. yeni bir branch cikartmis olayim. musterilerim ilk
+surumden memnun, ikincisinden degillerse ilki de kalabilir. dolayisiyla
+birden fazla surumu farkli branchler uzerinden ayni program icin
+yayinleyabilirim.
+
+feature branch: deneysel islerin yapildigi branchler. master branchle
+yine merge edilerek kullanilirlar.
+
+buyuk bir ekipte master branch’i tek bir kisi merge eder. merge etmenin
+ekipten ekibe degisen kurallari vardir, olmalidir. belli ozellikleri
+saglamayan feature branchleri belli kontrolleri saglamayanlar master
+branch’e gum diye merge edilmez.
+
+"en kisa kod en hizli calisir, en rahat okunur. kaliteli kod en kisa
+koddur."
+
+surum numarasi kafaya gore olur, pazarlamaci belirler.
+
+x.y.z: burada x, major; y, minor; z, bugfix olarak isimlendirilir.
+
+major degisiklikler icin bir goc projesi tanimlanmalidir, bu proje
+uzerinden degisiklikler yapilmalidir. ornegin GUI, navigasyon degismisse
+kullanicilarin egitime ihtiyaci vardir ve bu da ciddi bir is yukudur.
+
+alpha testleri, kullanicinin gormemesi gereken, programcilari ve
+testerlari ilgilendirir. muhtemelen eksik calisan seyler vardir, yeni
+ozellikler gelecektir.
+
+beta testleri, kullanici ile paylasilan testlerdir. yeni ozellik
+gelebilir ama major hata yoktur.
+
+surum adayi (CR/RC - release candidate), yalnizca ufak tefek hata
+temizlenmesi gereken surumdur.
+
+surdurulebilir proje yonetimi. "onceki yazilimci"!!!
+
+buraya kadar olanlar yalnizca merkezi surum takip sistemleri icindi.
+tumu dagitik surum takip sistemleri icin de geçerli ama bir baska
+tanimla beraber:
+
+Fork/Clone: master koddan kesin kopusun noktasidir. dagitik surum takip
+sistemlerinde her sey fork. elimdeki commiti baska birine verdigim
+"clone" anda fork yedim demektir. sonra tekil gelisitiriciler kendi
+questlerini uzak repository’lere push ederler (pull-request, kabul
+edilirse push). pull-request, push yapmam icin sosyallesmem gerek.
+Github’da fork atiyorsun mesela, sonra onu toparlayip, pull-request
+yapiyorsun. illa forklamak da gerekmiyor, watch-list’e de alabilirsin.
+ama ozgur yazilim dunyasinda bundan daha iyi calisan bir sey var:
+e-posta listeleri!
+
+fakat kodun acik olmasi onu herksin kullanabilecegi anlamina gelmiyor!
+acik kaynak ile ozgur yazilim arasindaki fark burada basliyor.
+
+acik kaynak kod, ozgur yazilim vs. olabilir ama isim hakki baska bir
+seydir.

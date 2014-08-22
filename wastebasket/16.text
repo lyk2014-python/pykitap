@@ -1,0 +1,29 @@
+% D7L3, LKD - Kamp ’14
+% Ceyhun Andac
+% 17.08.2014
+
+python-object oriented programming
+==================================
+
+instance: siniftan uretilmis nesne, ornek
+
+attribute: nesnelerin (orneklerin) sahip oldugu degiskenler
+
+method: nesnelerin (orneklerin) fonksiyonlari
+
+class: orneklerin nasil uretilecegini tanimlayan teorik dayanak
+
+function: belirli isleri yapmak icin yazilmis harici kod bloklari
+
+mutable variables: icerigi degistirilebilir degiskenler
+
+immutable variables: icerigi degistirilemez degiskenler
+
+inheritance: bir sinifin tum ozelliklerini iceren yeni bir sinif turetme
+islemi
+
+multiple inheritance: birden fazla sinifin ozellikleini iceren yeni bir
+sinif turetme islevi (mixins)
+
+composition: bir sinifin ozelliklerini bir baska sinifin ozelligi olarak
+kullanma teknigi

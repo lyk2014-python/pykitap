@@ -1,0 +1,32 @@
+error types: 
+siteye gir developer 
+broadcast (oluk örneği)heroes herkesin paketini görebiliyor. bu haberleşmeyi şifrelemek istersen ssl diye bir şifreleme metodu kullnaılyorsunuz. bir yere şifreli bağlanmak istiyorsan https://…………..—>443
+ 	   http://…………..—>80
+ssl sertificate
+
+https://www.google.com.tr/search?q=formlar+aras%C4%B1+de%C4%9Fi%C5%9Fken+aktarma&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a&channel=sb&gfe_rd=cr&ei=ifrpU-ucK5fDbPPngYgC
+?’den sonra gelen q eğişken ve q =aranan kelime
+get ve post un farkı=bir değişkeni alıp diğerine aktarıyorlar ikisi de hemen hemen aynı işi yapıyor
+——————————————HTML—————————————————
+<html>
+<head>
+<title>HTML Tutorial</title>
+
+<meta name="description" content="Award winning HTML and Javascript tutorials. You'll find easy to learn material on HTML, tables, forms, frames, javascript, style sheets and a whole lot more.">
+<meta name="keywords"    content="html tutorial, javascript, color picker, css, pagetutor, web design, how to make a web page, tables, frames, forms, password protection, gatekeeper, rollovers, style sheets">
+<meta name="generator"   content="Grey Matter Web Pro - http://www.pagetutor.com/misc/grey.html">
+</body>
+</html>
+listeler var
+<ul>
+<table>
+	<tr><td><ta>
+
+
+<table>
+<tr><th>Baslık<th><tr>
+Ctr>Ctd
+
+——————————css———————
+margin:spx spx
+(biri left right için diğeri top ve bottom için)

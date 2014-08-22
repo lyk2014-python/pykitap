@@ -1,0 +1,13 @@
+///////////////sabah pazartesi//////////////////
+
+django
+flask
+bottle
+cherrypy
+
+Model------------veritabaný katmanýyla iletiþim saðlar
+View-------------Kullanýcý etkileþiminin olduðu katman
+Template---------Html yanýtlarýn iþlendiði bölüm
+
+   
+ 
