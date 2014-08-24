@@ -9,6 +9,7 @@ Virtualenv: isletim sisteminin kendsine gore kurdugu python’lar icin
 isletim sisteminin yaptiklarini aradan cikararak bir python ortami
 saglar. "pip install virtualenv" ile kuruluyor.
 
+
 virtualenv dizin-adi yazarak bir klasor olusturulup bu dizinin icinde
 bulundugu dizinde source dizin-adi/bin/activate komutu verildiginde
 python artik bu dizinin icinde virtual olarak isletim sisteminden
