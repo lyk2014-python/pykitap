@@ -5,20 +5,20 @@
 A Section
 =========
 -----
-yazılım nedir? bilgi sisteminin elle tutulamayan parçası derleme <-\>
+Yazılım nedir? bilgi sisteminin elle tutulamayan parçası derleme <-\>
 tercüme derleyici de yazılım derslenmiş "object" kodda değişiklik mümkün
 değil. genelde verilen object kod, satılan lisans bir yazılımın yenisini
 yapacağımıza yetersiz yerlerini tamamlasak? -\> bunun için kaynak kod
 gereksinimimiz var.
 
-özgür bir yazılımın temel özellikleri: kullanım, çoğaltma, dagıtım,
+Özgür bir yazılımın temel özellikleri: kullanım, çoğaltma, dagıtım,
 değiştirme GKL (GPL) genel kamu lisansı: yegane temel önkoşulu GKL olan
 bir kod, yenilendikten sonra da kullanıcıyı (her kim ya da kimler
 olacaksa) yine GKL ile verilmeli BSD license çift lisanslama gerek GPL
-2.0 vr 3.0 için "Çzgür Yazılım ve Linux Günleri" Mart-Nisan
+2.0 vr 3.0 için "Özgür Yazılım ve Linux Günleri" Mart-Nisan
 ozgurlisanslar.org.tr
 
-web programming - D1L1 ———————-
+Web programming - D1L1 ———————-
 
 writing a program on web ex: project management environment, like
 redmine how long does it take? 1 day? 1 month? 1 year?
