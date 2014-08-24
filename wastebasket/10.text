@@ -29,4 +29,5 @@ degistirilir.
 
 Etiketleme: git tag -a v1.0 -m "1.0 surumu cikartildi."
 
+
 git stash: yapilan degisikliklerle stage’i kirletmemek icin...
