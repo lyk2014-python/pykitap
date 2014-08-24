@@ -25,5 +25,6 @@ islemi
 multiple inheritance: birden fazla sinifin ozellikleini iceren yeni bir
 sinif turetme islevi (mixins)
 
+
 composition: bir sinifin ozelliklerini bir baska sinifin ozelligi olarak
 kullanma teknigi
