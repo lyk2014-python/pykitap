@@ -44,7 +44,7 @@ klasörlerinin olduğunu görürsünüz. Biz en çok **bin** klasörünü kullan
 
 İlk önce aktif etmemiz gereken bir dosya var. O dosya da **blog/bin/** içindeki **activate** dosyasıdır.O zaman yukarıda oluşturduğumuz **blog** klasörünün içine girelim. Sonra aşağıdaki komutu çalıştıralım:
 
-   source bin/activate
+    source bin/activate
 
 eğer bunu yazdıktan sonra kullanıcı isminizin önüne aşağıdaki gibi **blog** yazısı geliyorsa, sanal ortamdasınız demektir. Rahatlıkla paketlerinizi kurabilirisiniz:
 

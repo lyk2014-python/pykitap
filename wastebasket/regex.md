@@ -13,7 +13,7 @@ işareti bilgini **articles/** başlaması gerektiğini söylüyor.
 burdaki **d** herhangi bir sayı(digit) olduğunu söylüyor. Burdaki **4** dört haneli sayı olduğunu söylüyor.
 
     /$
-Burdaki **$** işareti string'in **/** karakteri ile bittiğini söylüyor.  
+Burdaki **$** işareti string'in **/** karakteri ile bittiğini söylüyor. Mesela birisi **article/4512/** ya da **barticles/4521/** yazarsa, bizim belirlediğimiz format ile uyuşmaz. Doğrusu şu şekilde olmalı; **articles/4512/**.  
 Bir örnek daha
 
     ^articles/(\d{4})/(\d{2})/(\d+)/$
