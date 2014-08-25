@@ -5,7 +5,7 @@
 
 #### Kitaplar
 
-* [PYTHON - Fırat Özgül](http://kamp.linux.org.tr/2014/)
+* [PYTHON - Fırat Özgül](http://belgeler.istihza.com/)
 
 
 #### Konuyla ilintili baska seyler
@@ -19,11 +19,12 @@
 
 
 
-#### Interaktif websiteler
+#### Interaktif Websiteler
 
 * [Code Academy](http://www.codecademy.com/en/tracks/python)
-* [LearnPython.org](http://www.learnpython.org)
 * [Google's Python Class](https://developers.google.com/edu/python)
+* [LearnPython.org](http://www.learnpython.org)
+* [Tutorialspoint](http://www.tutorialspoint.com/python/index.htm)
 
 
 
