@@ -40,7 +40,7 @@ Wastebasket'ta topladığımız notları edit yapıp bir araya getirdiğimiz yer
 
 #### Extra Resources
 
-Buraya kitabın sonuna yararlı olabilecek farklı çeşit bilgi eklemek istiyoruz: **toplulumlar, etkinlikler, python öğreten websiteler** ve başkaları. Python eğitiminde yardımcı olabilecek herhangi bir kaynağı buraya ekleyebilirsiniz. 
+Buraya kitabın sonuna yararlı olabilecek farklı çeşit bilgi eklemek istiyoruz: **topluluklar, etkinlikler, python öğreten websiteler** ve başkaları. Python eğitiminde yardımcı olabilecek herhangi bir kaynağı buraya ekleyebilirsiniz. 
 
 
 
