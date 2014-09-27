@@ -48,9 +48,14 @@ Buraya kitabın sonuna yararlı olabilecek farklı çeşit bilgi eklemek istiyor
 
 Seneye ki Linux Yaz Kampı'na katılma şansınız olursa, siz de kendi kitabınız yapabilirsiniz! Kendi branchinizi oluşturup isterseniz Java, Ruby veya Güvenlik kitabı çıkarabilirsiniz. Bunu yapmak için:
 
-1-Kursun başında sınıftakilerden not tutmalarını isteyebilirsiniz.
-2-Kurs sonunda herkes notlarını wastebasket'a atabilir, oradan güzelce düzenleyip bunları edited dizinine atabilirsiniz.
-3-Notlar Markdown ile yazılırsa hayat kolaylaşır, herkes Markdown öğrenmiş olur.
-4-.md dosyalarını Git Book'la kolaylıkla yayınlayabilirsiniz.
-5-İşte elinizde bir kitap. Voila!
+
+1- Kursun başında sınıftakilerden not tutmalarını isteyebilirsiniz.
+
+2- Kurs sonunda herkes notlarını wastebasket'a atabilir, oradan güzelce düzenleyip bunları edited dizinine atabilirsiniz.
+
+3- Notlar Markdown ile yazılırsa hayat kolaylaşır, herkes Markdown öğrenmiş olur.
+
+4- .md dosyalarını Git Book'la kolaylıkla yayınlayabilirsiniz.
+
+5- İşte elinizde bir kitap. Voila!
 
